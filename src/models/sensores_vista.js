@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const sensores = new mongoose.Schema(
+const sensores_vista = new mongoose.Schema(
     {
         sensorPH: {
             type: String,
@@ -25,4 +25,4 @@ const sensores = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("sensores", sensores);
+module.exports = mongoose.model("sensores_vista", sensores_vista);
