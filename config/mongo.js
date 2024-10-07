@@ -1,4 +1,4 @@
-// Conexion a la base de datos
+// Conexion a la base de datos mongo db
 const mongoose = require('mongoose');
 async function dbConnect() {
     const DB_URI = process.env.DB_URI;

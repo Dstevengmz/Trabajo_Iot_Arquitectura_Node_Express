@@ -1,0 +1,11 @@
+
+/* codigo para usar algo basico mostrar en el index.html */
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+#data {
+            margin-top: 50px;
+            font-size: 1.5rem;
+        }

@@ -92,8 +92,14 @@ void loop() {
 
   // Enviar los datos al servidor mediante SIM7600 usando comandos AT
   sendCommand("AT+HTTPINIT");
+  delay(5000);
+  
+//sendCommand("AT+HTTPPARA=\"URL\",\"https://d3nm9bfn-3300.use2.devtunnels.ms/api/1.0/sensores_vista\"");
   sendCommand("AT+HTTPPARA=\"URL\",\"https://d3nm9bfn-3300.use2.devtunnels.ms/api/1.0/sensores_vista\"");
+
+  delay(2000);
   sendCommand("AT+HTTPPARA=\"CONTENT\",\"application/json\"");
+  delay(1000);
   sendCommand("AT+HTTPDATA=" + String(jsonString.length()) + ",10000");
   delay(2000);  // Espera para la preparación de la solicitud
   
@@ -103,7 +109,8 @@ void loop() {
   
   sendCommand("AT+HTTPACTION=1");  // Realizar solicitud POST
   delay(2000);  // Espera respuesta del servidor
-  sendCommand("AT+HTTPREAD=0,30");  // Leer respuesta
+
+  sendCommand("AT+HTTPREAD=0,100");  // Leer respuesta
   
   sendCommand("AT+HTTPTERM");  // Terminar sesión HTTP
   delay(2000);

@@ -1,3 +1,5 @@
+
+//Librerias express , router,midlewar todavia sin usar para authentiaciones, ruta de controladores
 const express = require('express');
 const router = express.Router();
 const revisar =require('../middleware/origin')

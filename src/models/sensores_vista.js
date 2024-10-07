@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const sensores_vista = new mongoose.Schema(
+    //esturctura para recibir los datos
     {
         sensorPH: {
             type: String,

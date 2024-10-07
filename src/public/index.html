@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos sensores</title>
-    
+    <title>Datos de Sensores</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    
+    <h1>Datos de Sensores en Tiempo Real</h1>
+    <div id="data">
+        <p>pH: <span id="sensorPH">--</span></p>
+        <p>Turbidez: <span id="sensorTurbidez">--</span></p>
+        <p>Concentración de Oxígeno: <span id="sensorOxygenConcentration">--</span></p>
+        <p>Saturación de Oxígeno: <span id="sensorOxygenSaturacion">--</span></p>
+        <p>Conductividad: <span id="sensorConductividad">--</span></p>
+    </div>
+    <!-- este codigo es para importar la liberia de socket.io, y adjunamos el archivo socjet.io para llamar y visualizar los datos en la web index.html por medio de los id -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/socket.js"></script>
 </body>
 </html>
